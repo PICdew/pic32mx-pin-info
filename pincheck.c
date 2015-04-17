@@ -4,23 +4,14 @@
 - @Author: Benjamin Bales
 - @Email: bbales@mail.uoguelph.ca
 - @Date:   2015-04-17 15:59:13
-- @Last Modified time: 2015-04-17 17:05:53
+- @Last Modified time: 2015-04-17 17:34:24
 -----------------------------------------------------------------------------------------*/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
-typedef struct PIN {
-    struct PIN * next;
-    int num;
-    char * desc;
-    char * type;
-    char * buffType;
-    char * name;
-} PIN;
-
+#include "pincheck.h"
 
 int main() {
     FILE * fp;
@@ -34,7 +25,6 @@ int main() {
     int stage = 0;
     PIN * tempPin;
     PIN * tempPinList;
-    int i;
 
     while((c = fgetc(fp)) != EOF){
         if(c == '\n'){
@@ -160,17 +150,33 @@ int main() {
                 break;
         }
     }
+    listAll(pins);
+
+    fclose(fp);
+    return 0;
+}
+
+int listAll(PIN ** pins){
+    int i,equiv;
+    PIN * tempPin;
 
     for(i = 0; i < 64; i++){
+        if(i < 16){
+            equiv = i;
+        }else if(i < 32){
+            equiv = i + 9;
+        }else if(i < 48){
+            equiv = i + 27;
+        }else if(i < 64){
+            equiv = i + 36;
+        }
         tempPin = pins[i];
         while(tempPin != NULL){
-            printf("Pin %d = %s\n",i, tempPin->name);
+            printf("Pin %d (tqfp adapter: %d) = %s\n",i+1, equiv+1,tempPin->name);
             if(tempPin->desc != NULL) printf("     --> %s\n",tempPin->desc);
             tempPin = tempPin->next;
         }
     }
 
-
-    fclose(fp);
-    return 0;
+    return 1;
 }
