@@ -1,0 +1,256 @@
+AN0 16 25 K2 B14 I Analog Analog input channels
+AN1 15 24 K1 A15 I Analog
+AN2 14 23 J2 B13 I Analog
+AN3 13 22 J1 A13 I Analog
+AN4 12 21 H2 B11 I Analog
+AN5 11 20 H1 A12 I Analog
+AN6 17 26 L1 A20 I Analog
+AN7 18 27 J3 B16 I Analog
+AN8 21 32 K4 A23 I Analog
+AN9 22 33 L4 B19 I Analog
+AN10 23 34 L5 A24 I Analog
+AN11 24 35 J5 B20 I Analog
+AN12 27 41 J7 B23 I Analog
+AN13 28 42 L7 A28 I Analog
+AN14 29 43 K7 B24 I Analog
+AN15 30 44 L8 A29 I Analog
+CLKI 39 63 F9 B34 I ST/CMOS External clock source input. Always associated with OSC1 pin function.
+CLKO 40 64 F11 A42 O — Oscillator crystal output. Connects to crystal or resonator in Crystal Oscillator mode. Optionally functions as CLKO in RC and EC modes. Always associated with OSC2 pin function.
+OSC1 39 63 F9 B34 I ST/CMOS Oscillator crystal input. ST buffer when configured in RC mode; CMOS otherwise.
+OSC2 40 64 F11 A42 I/O — Oscillator crystal output. Connects to crystal or resonator in Crystal Oscillator mode. Optionally functions as CLKO in RC and EC modes.
+SOSCI 47 73 C10 A47 I ST/CMOS 32.768 kHz low-power oscillator crystal input; CMOS otherwise
+SOSCO 48 74 B11 B40 O — 32.768 kHz low-power oscillator crystal output
+CN0 48 74 B11 B40 I ST Change notification inputs. Can be software programmed for internal weak pull-ups on all inputs.
+CN1 47 73 C10 A47 I ST
+CN2 16 25 K2 B14 I ST
+CN3 15 24 K1 A15 I ST
+CN4 14 23 J2 B13 I ST
+CN5 13 22 J1 A13 I ST
+CN6 12 21 H2 B11 I ST
+CN7 11 20 H1 A12 I ST
+CN8 4 10 E3 A7 I ST
+CN9 5 11 F4 B6 I ST
+CN10 6 12 F2 A8 I ST
+CN11 8 14 F3 A9 I ST
+CN12 30 44 L8 A29 I ST
+CN13 52 81 C8 B44 I ST
+CN14 53 82 B8 A55 I ST
+CN15 54 83 D7 B45 I ST
+CN16 55 84 C7 A56 I ST
+CN17 31 49 L10 B27 I ST
+CN18 32 50 L11 A32 I ST
+CN19 — 80 D8 A54 I ST
+CN20 — 47 L9 B26 I ST
+CN21 — 48 K9 A31 I ST
+IC1 42 68 E9 B37 I ST Capture Inputs 1-5
+IC2 43 69 E10 A45 I ST
+IC3 44 70 D11 B38 I ST
+IC4 45 71 C11 A46 I ST
+IC5 52 79 A9 A60 I ST
+OCFA 17 26 L1 A20 I ST Output Compare Fault A Input
+OC1 46 72 D9 B39 O — Output Compare Output 1
+OC2 49 76 A11 A52 O — Output Compare Output 2
+OC3 50 77 A10 B42 O — Output Compare Output 3
+OC4 51 78 B9 A53 O — Output Compare Output 4
+OC5 52 81 C8 B44 O — Output Compare Output 5
+OCFB 30 44 L8 A29 I ST Output Compare Fault B Input
+INT0 46 72 D9 B39 I ST External Interrupt 0
+INT1 42 18 G1 A11 I ST External Interrupt 1
+INT2 43 19 G2 B10 I ST External Interrupt 2
+INT3 44 66 E11 B36 I ST External Interrupt 3
+INT4 45 67 E8 A44 I ST External Interrupt 4
+RB0 16 25 K2 B14 I/O ST PORTB is a bidirectional I/O port
+RB1 15 24 K1 A15 I/O ST
+RB2 14 23 J2 B13 I/O ST
+RB3 13 22 J1 A13 I/O ST
+RB4 12 21 H2 B11 I/O ST
+RB5 11 20 H1 A12 I/O ST
+RB6 17 26 L1 A20 I/O ST
+RB7 18 27 J3 B16 I/O ST
+RB8 21 32 K4 A23 I/O ST
+RB9 22 33 L4 B19 I/O ST
+RB10 23 34 L5 A24 I/O ST
+RB11 24 35 J5 B20 I/O ST
+RB12 27 41 J7 B23 I/O ST
+RB13 28 42 L7 A28 I/O ST
+RB14 29 43 K7 B24 I/O ST
+RB15 30 44 L8 A29 I/O ST
+RC12 39 63 F9 B34 I/O ST
+RC13 47 73 C10 A47 I/O ST
+RC14 48 74 B11 B40 I/O ST
+RC15 40 64 F11 A42 I/O ST
+RD0 46 72 D9 B39 I/O ST PORTD is a bidirectional I/O port
+RD1 49 76 A11 A52 I/O ST
+RD2 50 77 A10 B42 I/O ST
+RD3 51 78 B9 A53 I/O ST
+RD4 52 81 C8 B44 I/O ST
+RD5 53 82 B8 A55 I/O ST
+RD6 54 83 D7 B45 I/O ST
+RD7 55 84 C7 A56 I/O ST
+RD8 42 68 E9 B37 I/O ST
+RD9 43 69 E10 A45 I/O ST
+RD10 44 70 D11 B38 I/O ST
+RD11 45 71 C11 A46 I/O ST
+RD12 — 79 A9 B43 I/O ST
+RE0 60 93 A4 B52 I/O ST PORTE is a bidirectional I/O port
+RE1 61 94 B4 A64 I/O ST
+RE2 62 98 B3 A66 I/O ST
+RE3 63 99 A2 B56 I/O ST
+RE4 64 100 A1 A67 I/O ST
+RE5 1 3 D3 B2 I/O ST
+RE6 2 4 C1 A4 I/O ST
+RE7 3 5 D2 B3 I/O ST
+RE8 — 18 G1 A11 I/O ST
+RF0 58 87 B6 B49 I/O ST PORTF is a bidirectional I/O port
+RF1 59 88 A6 A60 I/O ST
+RF3 33 51 K10 A35 I/O ST
+RF4 31 49 L10 B27 I/O ST
+RF5 32 50 L11 A32 I/O ST
+RG6 4 10 E3 A7 I/O ST
+RG7 5 11 F4 B6 I/O ST
+RG8 6 12 F2 A8 I/O ST
+RG9 8 14 F3 A9 I/O ST
+RG2 37 57 H10 B31 I ST PORTG input pins
+RG3 36 56 J11 A38 I ST
+T1CK 48 74 B11 B40 I ST Timer1 external clock input
+U1CTS 43 47 L9 B26 I ST UART1 clear to send
+U1RTS 49 48 K9 A31 O — UART1 ready to send
+U1RX 50 52 K11 A36 I ST UART1 receive
+U1TX 51 53 J10 B29 O — UART1 transmit
+U3CTS 8 14 F3 A9 I ST UART3 clear to send
+U3RTS 4 10 E3 A7 O — UART3 ready to send
+U3RX 5 11 F4 B6 I ST UART3 receive
+U3TX 6 12 F2 A8 O — UART3 transmit
+U2CTS 21 40 K6 A27 I ST UART2 clear to send
+U2RTS 29 39 L6 B22 O — UART2 ready to send
+U2RX 31 49 L10 B27 I ST UART2 receive
+U2TX 32 50 L11 A32 O — UART2 transmit
+U4RX 43 47 L9 B26 I ST UART4 receive
+U4TX 49 48 K9 A31 O — UART4 transmit
+U6RX 8 14 F3 A9 I ST UART6 receive
+U6TX 4 10 E3 A7 O — UART6 transmit
+U5RX 21 40 K6 A27 I ST UART5 receive
+U5TX 29 39 L6 B22 O — UART5 transmit
+SCK3 49 48 K9 A31 I/O ST Synchronous serial clock input/output for SPI3
+SDI3 50 52 K11 A36 I ST SPI3 data in
+SDO3 51 53 J10 B29 O — SPI3 data out
+SS3 43 47 L9 B26 I/O ST SPI3 slave synchronization or frame pulse I/O
+SCK2 4 10 E3 A7 I/O ST Synchronous serial clock input/output for SPI2
+SDI2 5 11 F4 B6 I ST SPI2 data in
+SDO2 6 12 F2 A8 O — SPI2 data out
+SS2 8 14 F3 A9 I/O ST SPI2 slave synchronization or frame pulse I/O
+SCK4 29 39 L6 B22 I/O ST Synchronous serial clock input/output for SPI4
+SDI4 31 49 L10 B27 I ST SPI4 data in
+SDO4 32 50 L11 A32 O — SPI4 data out
+SS4 21 40 K6 A27 I/O ST SPI4 slave synchronization or frame pulse I/O
+SCL1 44 66 E11 B36 I/O ST Synchronous serial clock input/output for I2C1
+SDA1 43 67 E8 A44 I/O ST Synchronous serial data input/output for I2C1
+SCL3 51 53 J10 B29 I/O ST Synchronous serial clock input/output for I2C3
+SDA3 50 52 K11 A36 I/O ST Synchronous serial data input/output for I2C3
+SCL4 6 12 F2 A8 I/O ST Synchronous serial clock input/output for I2C4
+SDA4 5 11 F4 B6 I/O ST Synchronous serial data input/output for I2C4
+SCL5 32 50 L11 A32 I/O ST Synchronous serial clock input/output for I2C5
+SDA5 31 49 L10 B27 I/O ST Synchronous serial data input/output for I2C5
+TMS 23 17 G3 B9 I ST JTAG Test mode select pin
+TCK 27 38 J6 A26 I ST JTAG test clock input pin
+TDI 28 60 G11 A40 I ST JTAG test data input pin
+TDO 24 61 G9 B33 O — JTAG test data output pin
+RTCC 42 68 E9 B37 O — Real-Time Clock alarm output
+CVREF- 15 28 L2 A21 I Analog Comparator Voltage Reference (low)
+CVREF+ 16 29 K3 B17 I Analog Comparator Voltage Reference (high)
+CVREFOUT 23 34 L5 A24 O Analog Comparator Voltage Reference output
+C1IN- 12 21 H2 B11 I Analog Comparator 1 negative input
+C1IN+ 11 20 H1 A12 I Analog Comparator 1 positive input
+C1OUT 21 32 K4 A23 O — Comparator 1 output
+C2IN- 14 23 J2 B13 I Analog Comparator 2 negative input
+C2IN+ 13 22 J1 A13 I Analog Comparator 2 positive input
+C2OUT 22 33 L4 B19 O — Comparator 2 output
+PMA0 30 44 L8 A29 I/O TTL/ST Parallel Master Port Address bit 0 input (Buffered Slave modes) and output (Master modes)
+PMA1 29 43 K7 B24 I/O TTL/ST Parallel Master Port Address bit 1 input (Buffered Slave modes) and output (Master modes)
+PMA2 8 14 F3 A9 O — Parallel Master Port address
+PMA3 6 12 F2 A8 O — (Demultiplexed Master modes)
+PMA4 5 11 F4 B6 O —
+PMA5 4 10 E3 A7 O —
+PMA6 16 29 K3 B17 O —
+PMA7 22 28 L2 A21 O —
+PMA8 32 50 L11 A32 O —
+PMA9 31 49 L10 B27 O —
+PMA10 28 42 L7 A28 O —
+PMA11 27 41 J7 B23 O —
+PMA12 24 35 J5 B20 O —
+PMA13 23 34 L5 A24 O —
+PMA14 45 71 C11 A46 O —
+PMA15 44 70 D11 B38 O —
+PMCS1 45 71 C11 A46 O — Parallel Master Port Chip Select 1 strobe
+PMCS2 44 70 D11 B38 O — Parallel Master Port Chip Select 2 strobe
+PMD0 60 93 A4 B52 I/O TTL/ST Parallel Master Port data (Demultiplexed Master mode) or address/data (Multiplexed Master modes)
+PMD1 61 94 B4 A64 I/O TTL/ST
+PMD2 62 98 B3 A66 I/O TTL/ST
+PMD3 63 99 A2 B56 I/O TTL/ST
+PMD4 64 100 A1 A67 I/O TTL/ST
+PMD5 1 3 D3 B2 I/O TTL/ST
+PMD6 2 4 C1 A4 I/O TTL/ST
+PMD7 3 5 D2 B3 I/O TTL/ST
+PMALL 30 44 L8 A29 O — Parallel Master Port address latch enable low byte (Multiplexed Master modes)
+PMALH 29 43 K7 B24 O — Parallel Master Port address latch enable high byte (Multiplexed Master modes)
+PMRD 53 82 B8 A55 O — Parallel Master Port read strobe
+PMWR 52 81 C8 B44 O — Parallel Master Port write strobe
+VBUS 34 54 H8 A37 I Analog USB bus power monitor
+VUSB3V3 35 55 H9 B30 P — USB internal transceiver supply. If the USB module is not used, this pin must be connected to VDD.
+VBUSON 11 20 H1 A12 O — USB Host and OTG bus power control output
+D+ 37 57 H10 B31 I/O Analog USB D+
+D- 36 56 J11 A38 I/O Analog USB D-
+USBID 33 51 K10 A35 I ST USB OTG ID detect
+C1RX 58 87 B6 B49 I ST CAN1 bus receive pin
+C1TX 59 88 A6 A60 O — CAN1 bus transmit pin
+AC1RX 32 40 K6 A27 I ST Alternate CAN1 bus receive pin
+AC1TX 31 39 L6 B22 O — Alternate CAN1 bus transmit pin
+C2RX 29 90 A5 A61 I ST CAN2 bus receive pin
+C2TX 21 89 E6 B50 O — CAN2 bus transmit pin
+ERXD0 61 41 J7 B23 I ST Ethernet Receive Data 0(2)
+ERXD1 60 42 L7 A28 I ST Ethernet Receive Data 1(2)
+ERXD2 59 43 K7 B24 I ST Ethernet Receive Data 2(2)
+ERXD3 58 44 L8 A29 I ST Ethernet Receive Data 3(2)
+ERXERR 64 35 J5 B20 I ST Ethernet receive error input(2)
+ERXDV 62 12 F2 A8 I ST Ethernet receive data valid(2)
+ECRSDV 62 12 F2 A8 I ST Ethernet carrier sense data valid(2)
+ERXCLK 63 14 F3 A9 I ST Ethernet receive clock(2)
+EREFCLK 63 14 F3 A9 I ST Ethernet reference clock(2)
+ETXD0 2 88 A6 A60 O — Ethernet Transmit Data 0(2)
+ETXD1 3 87 B6 B49 O — Ethernet Transmit Data 1(2)
+ETXD2 43 79 A9 B43 O — Ethernet Transmit Data 2(2)
+ETXD3 42 80 D8 A54 O — Ethernet Transmit Data 3(2)
+ETXERR 54 89 E6 B50 O — Ethernet transmit error(2)
+ETXEN 1 83 D7 B45 O — Ethernet transmit enable(2)
+ETXCLK 55 84 C7 A56 I ST Ethernet transmit clock(2)
+ECOL 44 10 E3 A7 I ST Ethernet collision detect(2)
+ECRS 45 11 F4 B6 I ST Ethernet carrier sense(2)
+EMDC 30 71 C11 A46 O — Ethernet management data clock(2)
+EMDIO 49 68 E9 B37 I/O — Ethernet management data(2)
+AERXD0 43 18 G1 A11 I ST Alternate Ethernet Receive Data 0(2)
+AERXD1 42 19 G2 B10 I ST Alternate Ethernet Receive Data 1(2)
+AERXERR 55 1 B2 A2 I ST Alternate Ethernet receive error input(2)
+AECRSDV 44 12 F2 A8 I ST Alternate Ethernet carrier sense data valid(2)
+AEREFCLK 45 14 F3 A9 I ST Alternate Ethernet reference clock(2)
+AETXD0 59 47 L9 B26 O — Alternate Ethernet Transmit Data 0(2)
+AETXD1 58 48 K9 A31 O — Alternate Ethernet Transmit Data 1(2)
+AETXEN 54 67 E8 A44 O — Alternate Ethernet transmit enable(2)
+AEMDC 30 71 C11 A46 O — Alternate Ethernet Management Data clock(2)
+AEMDIO 49 68 E9 B37 I/O — Alternate Ethernet Management Data(2)
+PGED1 16 25 K2 B14 I/O ST Data I/O pin for Programming/Debugging Communication Channel 1
+PGEC1 15 24 K1 A15 I ST Clock input pin for Programming/Debugging Communication Channel 1
+PGED2 18 27 J3 B16 I/O ST Data I/O pin for Programming/Debugging Communication Channel 2
+PGEC2 17 26 L1 A20 I ST Clock input pin for Programming/Debugging Communication Channel 2
+MCLR 7 13 F1 B7 I/P ST Master Clear (Reset) input. This pin isan active-low Reset to the device.
+AVDD 19 30 J4 A22 P P Positive supply for analog modules. This pin must be connected at all times.
+AVSS 20 31 L3 B18 P P Ground reference for analog modules
+VDD 10 00 00 00 P — Positive supply for peripheral logic and I/O pins
+VDD 26 00 00 00 P — Positive supply for peripheral logic and I/O pins
+VDD 38 00 00 00 P — Positive supply for peripheral logic and I/O pins
+VDD 57 00 00 00 P — Positive supply for peripheral logic and I/O pins
+VCAP 56 85 B7 B48 P — Capacitor for Internal Voltage Regulator
+VSS 9 00 00 00 P — Ground reference for logic and I/O pins. This pin must be connected at all times.
+VSS 25 00 00 00 P — Ground reference for logic and I/O pins. This pin must be connected at all times.
+VSS 41 00 00 00 P — Ground reference for logic and I/O pins. This pin must be connected at all times.
+VREF+ 16 29 K3 B17 I Analog Analog voltage reference (high) input
+VREF- 15 28 L2 A21 I Analog Analog voltage reference (low) input
