@@ -7,4 +7,7 @@ typedef struct PIN {
     char * name;
 } PIN;
 
+int listOptions();
+int pinInfo(int num, PIN ** pins);
+int revPinInfo(int num, PIN ** pins);
 int listAll(PIN ** pins);
