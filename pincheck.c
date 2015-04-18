@@ -4,7 +4,7 @@
 - @Author: Benjamin Bales
 - @Email: bbales@mail.uoguelph.ca
 - @Date:   2015-04-17 15:59:13
-- @Last Modified time: 2015-04-18 10:30:52
+- @Last Modified time: 2015-04-18 13:57:33
 -----------------------------------------------------------------------------------------*/
 
 #include <stdio.h>
@@ -153,20 +153,21 @@ int main(int argc, char *argv[]) {
     
     if(argc == 1){
         listOptions();
-    }
-
-    if(argc == 2){
+    }else if(argc == 2){
         if(strcmp("-a",argv[1]) == 0){
             listAll(pins);
         }
-    }
-
-    if(argc == 3){
+    }else if(argc == 3){
         if(strcmp("-p",argv[1]) == 0){
             pinInfo(atoi(argv[2]),pins);
-        }
+        }else
         if(strcmp("-r",argv[1]) == 0){
             revPinInfo(atoi(argv[2]),pins);
+        }else
+        if(strcmp("-s",argv[1]) == 0){
+            searchName(pins,argv[2]);
+        }else{
+            printf("Option does not exist.\n");
         }
     }
 
@@ -289,5 +290,28 @@ int listAll(PIN ** pins){
         }
     }
 
+    return 1;
+}
+
+int searchName(PIN ** pins, char * keyword){
+    int i;
+    int matches = 0;
+    PIN * tempPin;
+    printf("\nSearch Results:\n\n");
+    for(i=0;i<64;i++){
+        tempPin = pins[i];
+        while(tempPin != NULL){
+            if(!strncmp(keyword,tempPin->name,strlen(keyword))){
+                matches++;
+                printf("    %s  <---> %d\n",tempPin->name,tempPin->num);
+            }
+            tempPin = tempPin->next;
+        }
+    }
+    if(!matches){
+        printf("    No matches found.\n\n");
+    }else{
+        printf("\n%d matches found.\n",matches);
+    }
     return 1;
 }
