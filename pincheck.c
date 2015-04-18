@@ -4,7 +4,7 @@
 - @Author: Benjamin Bales
 - @Email: bbales@mail.uoguelph.ca
 - @Date:   2015-04-17 15:59:13
-- @Last Modified time: 2015-04-17 18:10:34
+- @Last Modified time: 2015-04-18 10:30:52
 -----------------------------------------------------------------------------------------*/
 
 #include <stdio.h>
@@ -211,6 +211,27 @@ int pinInfo(int num, PIN ** pins){
 
     printf("\n");
 
+    cleanUp(pins);
+
+    return 1;
+}
+
+int cleanUp(PIN ** pins){
+    int i;
+    PIN* tempPin;
+    PIN* tempPin2;
+    for(i=0;i<64;i++){
+        tempPin = pins[i];
+        while(tempPin != NULL){
+            free(tempPin->name);
+            free(tempPin->desc);
+            free(tempPin->type);
+            free(tempPin->buffType);
+            tempPin2 = tempPin->next;
+            free(tempPin);
+            tempPin = tempPin2;
+        }
+    }
     return 1;
 }
 
