@@ -4,7 +4,7 @@
 - @Author: Benjamin Bales
 - @Email: bbales@mail.uoguelph.ca
 - @Date:   2015-04-17 15:59:13
-- @Last Modified time: 2015-04-18 13:57:33
+- @Last Modified time: 2015-04-18 13:58:59
 -----------------------------------------------------------------------------------------*/
 
 #include <stdio.h>
@@ -164,7 +164,7 @@ int main(int argc, char *argv[]) {
         if(strcmp("-r",argv[1]) == 0){
             revPinInfo(atoi(argv[2]),pins);
         }else
-        if(strcmp("-s",argv[1]) == 0){
+        if(strcmp("-s",argv[1]) == 0 || strcmp("-f",argv[1]) == 0){
             searchName(pins,argv[2]);
         }else{
             printf("Option does not exist.\n");
@@ -179,6 +179,7 @@ int listOptions(){
     printf("Available options: \n\n    -a : list all pins and their information.\n");
     printf("    -p [num] : show information for physical pin.\n");
     printf("    -r [num] : show information for tqfp adapter pin.\n");
+    printf("    -f [keyword] : Search for pins based on name.\n");
     printf("\n");
     return 1;
 }
